@@ -1,0 +1,47 @@
+<!--pages/page03/page03.wxml-->
+
+<!-- 模板声明 -->
+<template name="msgItem">
+  <text>这是模板声明，一次声明，多次引用呦...</text>
+  <view>索引：{{index}} -- 内容：{{msg}} -- 时间：{{time}}</view>
+</template>
+
+<!-- 模板引用 -->
+<template is="msgItem" data="{{...item}}"></template>
+
+———————————————————————————
+
+<!-- 组件的使用：嵌套 通信 传值 -->
+<view>
+  <!-- 1.子组件向父组件通信: 写法 bind:sendEvent 或者 bindsendEvent -->
+  <!-- 2.父组件向子组件通信： -->
+  <component01 id="component01Id"
+               bind:sendEvent="receiveEvent"
+               params="{{age}}">
+    <component02>
+      <view slot="before">page03页面里的内容  03030303</view>
+      <view slot="after">page03页面里的内容  30303030</view>
+    </component02>
+  </component01>
+</view>
+
+<view>名称：{{name}} -- sex：{{sex}}</view>
+
+———————————————————————————
+
+<button type="primary" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" size="mini">获取信息</button>
+
+<button type="primary" bindtap="payClick" size="mini">拉起支付</button>
+
+<button type="primary" bindtap="authorizationClick" size="mini">获取位置</button>
+
+<button type="primary" bindtap="walkClick" size="mini">获取微信运动步数</button>
+
+
+
+
+
+
+———————————————————————————
+
+

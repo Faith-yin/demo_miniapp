@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "component01": "/components/business/component01/component01",
+    "component02": "/components/business/component02/component02"
+  }
+}

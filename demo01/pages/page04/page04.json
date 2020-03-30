@@ -1,0 +1,19 @@
+{
+  "usingComponents": {
+    "mp-cells": "/components/base/weui-miniprogram/cells/cells",
+    "mp-cell": "/components/base/weui-miniprogram/cell/cell",
+    "mp-badge": "/components/base/weui-miniprogram/badge/badge",
+    "mp-loading": "/components/base/weui-miniprogram/loading/loading",
+    "mp-toptips": "/components/base/weui-miniprogram/toptips/toptips",
+    "mp-checkbox-group": "/components/base/weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-form": "/components/base/weui-miniprogram/form/form",
+    "mp-dialog": "/components/base/weui-miniprogram/dialog/dialog",
+    "msg": "/components/base/weui-miniprogram/msg/msg",
+    "mp-halfScreenDialog": "/components/base/weui-miniprogram/half-screen-dialog/half-screen-dialog",
+    "mp-actionSheet": "/components/base/weui-miniprogram/actionsheet/actionsheet",
+    "mp-navigation-bar": "/components/base/weui-miniprogram/navigation-bar/navigation-bar",
+    "mp-tabbar": "/components/base/weui-miniprogram/tabbar/tabbar",
+    "mp-searchbar": "/components/base/weui-miniprogram/searchbar/searchbar",
+    "mp-video-swiper": "@miniprogram-component-plus/video-swiper"
+  }
+}

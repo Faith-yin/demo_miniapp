@@ -1,0 +1,7 @@
+<!--components/business/component02/component02.wxml-->
+<view>
+  这是component02组件里面的内容呀 -- {{msg}}
+  <button catchtap="childClick">02按钮</button>
+  <slot name="before"/>
+  <slot name="after"/>
+</view>

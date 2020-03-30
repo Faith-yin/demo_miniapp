@@ -1,0 +1,142 @@
+<!--pages/page04/page04.wxml-->
+<!-- 微信扩展组件的使用 -->
+<view>
+——————————————————————————————————————
+
+<mp-cells title="新消息提示跟摘要信息后，统一在列表右侧">
+  <mp-cell title="单行列表" link>
+    <view slot="footer">
+      <view style="display: inline-block; vertical-align: middle; font-size: 17px">详细信息</view>
+      <mp-badge style="margin-left: 5px;margin-right: 5px;" ext-class="blue"/>
+    </view>
+  </mp-cell>
+</mp-cells>
+
+——————————————————————————————————————
+
+<mp-cells title="未读数红点跟在主题信息后，统一在列表左侧">
+  <mp-cell>
+      <view slot="title" style="position: relative;margin-right: 10px;">
+          <image src="../../assets/images/类图关系举例.png" style="width: 50px; height: 50px; display: block"/>
+          <mp-badge content="99+" style="position: absolute; top: -0.4em; right: -0.4em;"/>
+      </view>
+      <view>联系人名称</view>
+      <view style="font-size: 13px;color: #888888;">摘要信息</view>
+  </mp-cell>
+</mp-cells>
+
+——————————————————————————————————————
+
+<mp-cell link>
+    <view style="display: inline-block; vertical-align: middle">单行列表</view>
+    <mp-badge style="margin-left: 5px;" content="New"/>
+</mp-cell>
+
+——————————————————————————————————————
+
+<mp-loading type="circle" tips="拼命加载中..."></mp-loading>
+
+——————————————————————————————————————
+
+<button class="weui-btn" type="default" bindtap="openConfirm">确认取消按钮</button>
+<button class="weui-btn" type="default" bindtap="tapOneDialogButton">只有确认按钮</button>
+
+<mp-dialog title="test" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+  <view>test content</view>
+</mp-dialog>
+<mp-dialog title="test1" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+  <view>test content1</view>
+</mp-dialog>
+
+——————————————————————————————————————
+
+<mp-msg type="success" title="操作成功">
+    <view slot="desc">
+      内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
+      <navigator url="https://www.mi.com" class="weui-msg__link">文字链接</navigator>
+    </view>
+    <view slot="extend">
+        <view>1. 说明1</view>
+        <view>2. 说明2</view>
+    </view>
+    <view slot="handle">
+        <button class="weui-btn" type="primary">主要操作</button>
+        <button class="weui-btn" type="default">辅助操作</button>
+    </view>
+    <view slot="footer">
+        <view class="weui-footer__links">
+            <navigator url="" class="weui-footer__link">底部链接文本</navigator>
+        </view>
+        <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+    </view>
+</mp-msg>
+
+——————————————————————————————————————
+
+<mp-toptips msg="这是一个错误提示" type="error" show="true"></mp-toptips>
+
+——————————————————————————————————————
+
+<mp-halfScreenDialog 
+  bindbuttontap="buttontap"
+  show="{{show}}"
+  maskClosable="{{false}}" 
+  title="测试标题B" 
+  subTitle="测试标题B的副标题"
+  desc="辅助描述内容，可根据实际需要安排"
+  tips="辅助提示内容，可根据实际需要安排"
+  buttons="{{dialogButtons}}"></mp-halfScreenDialog>
+
+<button class="weui-btn" type="primary" bindtap="open">Open</button>
+
+——————————————————————————————————————
+
+<button bindtap="openBtnGroup">底部弹出按钮组</button>
+
+<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" title="这是一个标题，可以为一行或者两行。">\
+</mp-actionSheet>
+
+——————————————————————————————————————
+
+<mp-tabbar 
+  style="position:fixed;bottom:0;width:100%;left:0;right:0;" 
+  list="{{list}}" 
+  bindchange="tabChange"></mp-tabbar>
+
+——————————————————————————————————————
+
+<mp-searchbar bindselectresult="selectResult" 
+  value="{{searchValue}}"
+  search="{{search}}"
+  placeholder="输入内容进行搜索..."></mp-searchbar>
+
+——————————————————————————————————————
+
+<mp-video-swiper video-list="{{videoList}}"></mp-video-swiper>
+
+——————————————————————————————————————
+
+
+——————————————————————————————————————
+
+
+——————————————————————————————————————
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+——————————————————————————————————————
+
+
+

@@ -1,0 +1,121 @@
+<!--pages/demo01/demo01.wxml-->
+<view class="container">
+<view>{{title}}</view>
+
+<button size="mini" type="primary" plain>add</button>
+<button size="mini" type="warn" plain>dec</button>
+
+<view wx:for="{{obj}}" wx:key="index">
+{{index}} -- {{item.name}} -- {{item.age}}
+</view>
+
+<checkbox-group bindchange="checkboxChange">
+  <label wx:for="{{list}}" wx:key="index">
+    <checkbox value="{{item.name}}" 
+              checked="{{item.checked}}" 
+              disabled="{{item.disabled}}"
+              color="orange"/>{{item.value}}
+  </label>
+</checkbox-group>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <switch name="switch"></switch>
+  <slider name="slider" show-value></slider>
+  <input name="input" placeholder="请输入(最长10位)..." confirm-type="go" maxlength="10"></input>
+  <input name="input2" password placeholder="输入密码..."></input>
+  <input name="input3" type="digit" placeholder="带小数点的数字键盘..."></input>
+  <textarea placeholder="请输入一些内容..." value="默认文字" auto-height ></textarea>
+  <button size="mini" form-type="submit">submit</button>
+  <button size="mini" form-type="reset">reset</button>
+</form>
+
+
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  普通选择器-->{{array[index]}}
+</picker>
+
+<picker mode="multiSelector" 
+        bindchange="bindMultiPickerChange" 
+        bindcolumnchange="bindMultiPickerColumnChange" 
+        value="{{multiIndex}}" 
+        range="{{multiArray}}">
+  多列选择器-->{{multiArray[0][multiIndex[0]]}} - {{multiArray[1][multiIndex[1]]}} - {{multiArray[2][multiIndex[2]]}}
+</picker>
+
+<picker mode="time"
+        bindchange="bindTimeChange"
+        start="08:30"
+        end="19:00"
+        value="time">时间选择器-->{{time}}</picker>
+
+<picker mode="date"
+        bindchange="bindDateChange"
+        start="1990-01-01"
+        end="2030-01-01"
+        value="date">日期选择器-->{{date}}</picker>
+
+<picker mode="region"
+        value="region"
+        bindchange="bindRegionChange">省市区选择器-->{{region[0]}} - {{region[1]}} - {{region[2]}}</picker>
+
+
+<block wx:for="{{iconSize}}" wx:key="index">
+  <icon type="success" size="{{item}}"></icon>
+</block>
+|
+<block wx:for="{{iconType}}" wx:key="index">
+  <icon type="{{item}}"></icon>
+</block>
+|
+<block wx:for="{{iconColor}}" wx:key="index">
+  <icon type="success" size="40" color="{{item}}"></icon>
+</block>
+
+<progress percent="60" show-info border-radius="10" activeColor="#ff6700" active></progress>
+
+
+<swiper indicator-dots
+        autoplay 
+        interval='2000'
+        duration='500'>
+  <block wx:for="{{background}}" wx:key="index">
+    <swiper-item>
+      <view>第{{index+1}}张图片</view>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<scroll-view scroll-x scroll-left='400' scroll-with-animation>
+  <view>这是一个横向滚动区域111....</view>
+</scroll-view>
+
+<navigator url="/pages/page02/page02" open-type="navigate">跳转到第二页</navigator>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

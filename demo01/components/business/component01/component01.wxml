@@ -1,0 +1,11 @@
+<!--components/business/component01/component01.wxml-->
+<view>
+  这是component01组件里面的内容哇 -- {{msg}} -- {{params}}
+  <button bindtap="parentClick">01通知父组件</button>
+  
+  <!-- 数据监听 -->
+  <button size="mini" type="primary" bindtap="decClick">dec</button>
+  {{obj.numberA}} + {{obj.numberB}} = {{sum}}
+  <button size="mini" type="primary" bindtap="addClick">add</button>
+  <slot/>
+</view>

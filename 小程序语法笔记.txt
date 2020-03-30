@@ -1,0 +1,136 @@
+
+
+# 小程序 常用语法：
+
+
+1，wx:for (类似vue中的v-for)
+
+	(1)用法：
+	
+		<view wx:for="{{obj}}" wx:key="index">
+		
+			{{index}} -- {{item.name}} -- {{item.age}}
+			
+		</view>
+		
+	(2)说明：循环数组 或 对象
+	
+
+2，wx:if (类似vue中的v-if)
+
+	(1)用法：
+	
+		<view wx:if="{{condition}}"> 这里会不会被显示呢 </view>
+		
+	(2)说明：条件渲染
+	
+	(3)[注]wx:if 和 hidden 的区别 (类似vue中的 v-if 和 v-show的区别)：
+		
+		wx:if 渲染或不渲染  ;	hidden 渲染，但是显示或不显示
+		
+		
+
+
+11，behaviors：
+
+	(1)用法：
+		
+		<1>定义：
+			
+			let obj = Behaviors({
+			
+				data{},properties{},methods{}
+			
+			})
+		
+		<2>引用：behaviors: [obj]
+
+	(2)说明：behaviors是用于组件间代码共享的特性，每个 behavior 可以包含一组属性、数据、生命周期函数和方法，组件引用它时，它的属性、数据和方法会被合并到组件中，生命周期函数也会在对应时机被调用。每个组件可以引用多个 behavior 。 behavior 也可以引用其他 behavior 。
+
+
+12，template模板wxml复用
+
+	(1)用法：
+	
+		<1>定义：<template name="box-card"></template>
+		
+		<2>引用：
+			
+			<import src="./components/template/box-card.wxml"/>
+		
+			<template is="box-card"></template>
+	
+	(2)说明：可以封装一些常用公用的模板，达到代码复用的作用。
+	
+
+13，mixins
+
+	(1)用法：
+	
+		<1>定义：需要在until下新建mixins.js劫持并改写Page函数，将mixins中的内容可以注入到Page(options)的options中
+		
+		<2>引用：
+			
+			const testMethods = require("./mixins/testMethods.js")
+			
+			mixins: [testMethods]
+			
+	(2)说明：如同Vue中mixins作用
+	
+	(3)[注]：参考(https://segmentfault.com/a/1190000019527762)
+	
+	
+14，data-* 和 e.currentTarget.dataset
+
+	(1)用法：
+	
+		<1>定义：
+			
+			例：
+				<button bintap="buy" data-textid="101"></button>
+				
+				buy: function(e) {
+					console.log(e.currentTarget.dataset.textid) // 101
+				}
+				
+	(2)说明：data-* 属于标签传参，e.currentTarget.dataset 可以拿到标签内的参数
+	
+	(3)[注]：data-* *处的参数名不能驼峰命名，必须都是小写才能生效
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

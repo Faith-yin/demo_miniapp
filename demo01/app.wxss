@@ -1,0 +1,6 @@
+/**app.wxss**/
+@import './components/base/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+.container {
+  text-align: center;
+} 
