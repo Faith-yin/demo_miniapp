@@ -1,0 +1,11 @@
+/**app.wxss**/
+
+@import "./common//style/public.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+} 

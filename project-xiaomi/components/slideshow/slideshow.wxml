@@ -1,0 +1,14 @@
+<!--components/slideshow/slideshow.wxml-->
+<!-- 轮播图 -->
+<view>
+  <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          circular="{{circular}}"
+          easing-function="{{easingFunction}}">
+    <block wx:for="{{imageArr}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" mode="heightFix"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

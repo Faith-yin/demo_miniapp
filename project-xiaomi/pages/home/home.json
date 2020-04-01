@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navbar": "/components/navbar/navbar",
+    "slideshow": "/components/slideshow/slideshow",
+    "mp-icon": "/assets/weui-miniprogram/icon/icon"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true
+}

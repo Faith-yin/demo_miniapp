@@ -1,0 +1,18 @@
+<!--components/navbar/navbar.wxml-->
+<!-- 自定义顶部导航栏 -->
+<view class="navbar" style="height: {{navHeight}}">
+  <view class="navbar-box--left">
+    <view class="title" style="position: relative; top: {{navTop}}">小米Lite</view>
+  </view>
+  <view class="navbar-box--right">
+    <input class="right_input"
+          style="position: relative; top: {{navTop}}" 
+          placeholder="搜索商品"
+          disabled
+          bindtap="searchClick"/>
+  </view>
+
+
+
+
+</view>

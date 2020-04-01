@@ -1,0 +1,37 @@
+/* components/navbar/navbar.wxss */
+.navbar {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: #ff6700;
+  display: flex;
+  z-index: 10;
+}
+
+.navbar-box--left {
+  display: flex;
+}
+
+.navbar-box--left .title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 40rpx;
+  
+}
+
+.navbar-box--right {
+  padding-left: 25rpx;
+}
+
+.navbar-box--right .right_input {
+  width: 300rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 50rpx;
+  color: #999;
+  font-size: 25rpx;
+  padding-left: 25rpx;
+}

@@ -1,0 +1,72 @@
+<!--pages/home/home.wxml-->
+<view class="body">
+  <!-- 顶部导航栏 -->
+  <navbar></navbar>
+  <!-- 轮播图组件 -->
+  <slideshow></slideshow>
+  <!-- 展示图标按钮区域 -->
+  <view class="list-wrapper">
+    <view wx:for="{{listBtn}}" wx:key="index" class="item-wrapper">
+      <image src="{{item.iconPath}}" class="icon-img"></image>
+      <view class="icon-text">{{item.text}}</view>
+    </view>
+  </view>
+  <!-- 大卡片 -->
+  <view class="big-card">
+    <view class="title">极客之选</view>
+    <view>
+      <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3c409123c70dc6fa2250916cb1cf2a4b.jpg?thumb=1&w=1226&h=460&f=webp&q=90" class="image"></image>
+    </view>
+    <view class="image-info">
+      <view class="image-title">Redmi只能电视MAX</view>
+      <view class="image-desc">声音真实动听/连接方式多/设计简洁时尚/支持壁挂</view>
+      <view class="image-price">￥399</view>
+    </view>
+  </view>
+  <view class="middle-title">猜你喜欢</view>
+  <!-- 循环小卡片 -->
+  <view class="small-box-list">
+    <view class="small-box-item" wx:for="{{cardList}}" wx:key="index">
+      <image class="image-pic" src="{{item.imgPath}}"></image>
+      <view class="image-title font-hidden">{{item.title}}</view>
+      <view class="image-desc font-multicell-hidden">{{item.desc}}</view>
+      <view class="image-price">
+        <view class="now-price">{{item.nowPrice}}</view>
+        <view class="past-price">{{item.pastPrice}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部最后一个卡片 -->
+  <view class="bottom-box">
+    <view class="title-wrapper">
+      <view class="title">商城早报</view>
+      <view class="more">更多内容 ></view>
+    </view>
+    <image class="image-img" 
+          src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/20dd5c13d766a0c2d17ad742fa7794c8.jpg?thumb=1&w=1226&h=460&f=webp&q=90"
+          mode="heightFix"></image>
+    <view class="image-bottom">
+      <view class="image-title">众测：小米10 pro 能刚 iPhone 11 pro max</view>
+      <view class="image-info">
+        <view>3-24 14:31</view>
+        <view class="bottom-right">
+          <view class="one">
+            <!-- <mp-icon type="eyes-on" color="red" size="{{25}}"></mp-icon> -->
+            2246 浏览
+          </view>
+          <view>
+            <!-- <mp-icon type="comment" icon="eyes-on" color="#999" size="{{25}}"></mp-icon>           -->
+            26 评论
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部文字信息 -->
+  <view class="bottom-text">
+    始终坚持做 “感动人心，价格厚道” 的好产品
+  </view>
+
+
+
+</view>
