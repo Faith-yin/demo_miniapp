@@ -1,1 +1,73 @@
 /* pages/find/find.wxss */
+
+.find-body {
+  padding-bottom: 20rpx;
+  min-height: 100vh;
+  background-color: #eee;
+}
+
+.top-list {
+  width: 100%;
+  padding: 20rpx 0 15rpx;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+}
+
+.top-item {
+  
+}
+
+.top-item .image-img-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.top-item .image-img-wrapper .image-img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.top-item .image-text {
+  font-size: 25rpx;
+  color: #999;
+}
+
+.card-list {
+  width: 95%;
+  margin: 0rpx auto;
+}
+
+.card-item {
+  width: 100%;
+  margin: 20rpx 0 0;
+  background-color: #fff;
+  box-shadow: 1rpx 1rpx 1rpx #eee;
+}
+
+.card-item .image-img {
+  width: 100%;
+}
+
+.card-item .image-info {
+  padding: 30rpx 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card-item .image-info .image-tag {
+  margin-right: 20rpx;
+  padding: 5rpx 15rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  background-color: #ff6700;
+  color: #fff;
+  font-size: 25rpx;
+}
+
+.card-item .image-info .image-title {
+
+}
+
+
+

@@ -16,3 +16,8 @@
   -webkit-box-orient: vertical;
 }
 
+/* 修改默认按钮文案样式 */
+button {
+  font-weight: 500 !important;
+}
+  

@@ -1,1 +1,46 @@
 /* pages/cart/cart.wxss */
+
+.cart-body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eee;
+}
+
+/* 购物车 空 */
+
+.main-info {
+  padding: 100rpx 0 90rpx;
+}
+
+.main-info .icon-wrapper {
+  margin: 0 auto;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  background-color: rgb(211, 209, 209);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main-info .icon {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.main-info .icon-text {
+  padding-top: 30rpx;
+  font-size: 45rpx;
+  text-align: center;
+}
+
+.btn {
+  width: 80% !important;
+  background-color: #ff6700;
+  color: #fff;
+}
+
+/* 购物车 没空 */
+
+

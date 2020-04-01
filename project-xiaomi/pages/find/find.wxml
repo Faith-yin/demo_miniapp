@@ -1,2 +1,22 @@
 <!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+<view class="find-body">
+  <!-- 顶部信息 -->
+  <view class="top-list">
+    <view wx:for="{{imgBtnList}}" wx:key="index" class="top-item">
+      <view class="image-img-wrapper"><image src="{{item.imgPath}}" class="image-img"></image></view>
+      <view class="image-text">{{item.text}}</view>
+    </view>
+  </view>
+  <!-- 循环卡片 -->
+  <view class="card-list">
+    <view wx:for="{{cardList}}" wx:key="index" class="card-item">
+      <image src="{{item.imgPath}}" mode="aspectFill" class="image-img"></image>
+      <view class="image-info">
+        <view class="image-tag">{{item.tag}}</view>
+        <view class="image-title">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+
+
+</view>
