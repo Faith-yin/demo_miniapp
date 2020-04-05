@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "mp-cell": "/assets/weui-miniprogram/cell/cell",
+    "mp-cells": "/assets/weui-miniprogram/cells/cells",
+    "mp-icon": "/assets/weui-miniprogram/icon/icon",
+    "mp-halfScreenDialog": "/assets/weui-miniprogram/half-screen-dialog/half-screen-dialog",
+    "mp-toptips": "/assets/weui-miniprogram/toptips/toptips",
+    "mp-dialog": "/assets/weui-miniprogram/dialog/dialog"
+  },
+  "navigationBarBackgroundColor": "#f7f7f7"
 }

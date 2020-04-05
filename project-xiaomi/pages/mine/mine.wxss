@@ -1,1 +1,245 @@
 /* pages/mine/mine.wxss */
+.mine-page {
+  min-height: 100vh;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  background-color: #eee; 
+}
+
+.bg {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.pic-cell {
+  padding: 10rpx 20rpx;
+  display: flex;
+  background-color: #fff;
+}
+
+.pic-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pic-name {
+  font-size: 34rpx;
+}
+
+.pic-middle {
+  display: flex;
+}
+
+.pic-img {
+  width: 130rpx;
+  height: 130rpx;
+  padding-right: 15rpx;
+}
+
+.pic-id-name {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.pic-btn {
+  margin-left: 15rpx;
+  padding: 0 10rpx;
+  line-height: 38rpx;
+  font-size: 18rpx;
+  color: #eee;
+  background-color: #999;
+  border-radius: 20rpx;
+}
+
+
+
+.single-cell {
+  margin: 20rpx 0;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  line-height: 54rpx;
+  font-size: 26rpx;
+  display: flex;
+  background-color: #fff;
+}
+
+.single-cell image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.single-cell .single-desc {
+  color: #999;
+}
+
+
+.multi-list {
+  font-size: 28rpx;
+}
+
+.multi-cell {
+  background-color: #fff;
+  padding: 20rpx 40rpx;
+  position: relative;
+  box-sizing: border-box;
+  line-height: 54rpx;
+  display: flex;
+  background-color: #fff;
+}
+
+.multi-cell::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  top: 90rpx;
+  border-bottom: 0.05rpx solid rgb(243, 243, 243);
+}
+
+.multi-cell:last-child::after, .multi-cell:nth-last-child(3)::after {
+  content: "";
+  border: none;
+}
+
+.multi-cell:nth-last-child(2) {
+  margin-top: 20rpx;
+}
+
+.multi-cell image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+
+/* 自定义底部弹窗 */
+.dialog-box {
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0rpx;
+  bottom: 0rpx;
+  background-color: #fff;
+  z-index: 100;
+  border-top: 1rpx solid #eee;
+}
+
+.dialog-moveTop {
+  animation: bottomDialogMove1 0.3s ease forwards; /* forwards保持最后一帧 */
+}
+
+.dialog-moveBottom {
+  animation: bottomDialogMove2 0.3s ease forwards; /* forwards保持最后一帧 */
+}
+
+/* 底部弹窗 动画向上 */
+@keyframes bottomDialogMove1 {
+  from {
+    height: 0rpx;
+  }
+  to {
+    height: 600rpx;
+  }
+}
+/* 底部弹窗 动画向下 */
+@keyframes bottomDialogMove2 {
+  from {
+    height: 600rpx;
+  }
+  to {
+    height: 0rpx;
+  }
+}
+
+.dialog-box .icon-wrapper {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.dialog-box .icon-close {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* .dialog-box .bottom-container {
+  
+} */
+
+.dialog-box .login-text {
+  padding: 30rpx 0;
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.dialog-box .get-btn {
+  width: 80%;
+  border-radius: 50rpx;
+}
+
+.dialog-box .desc-text {
+  padding: 30rpx 150rpx;
+  text-align: center;
+  color: #999;
+  font-size: 20rpx;
+}
+
+.pic-wrapper {
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.pic-wrapper .icon-pic {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+
+/* 自定义中间弹窗 */
+.msg-dialog {
+  width: 80%;
+  border-radius: 10rpx;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -300rpx;
+  background-color: #F8F8F8;
+  z-index: 200;
+}
+
+.msg-dialog .title {
+  padding: 20rpx 0;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.msg-dialog .content {
+  padding: 10rpx 20rpx 30rpx;
+  font-size: 26rpx;
+  color: rgb(180, 178, 178);
+  text-align: center;
+}
+
+.msg-dialog .btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.msg-dialog .btn-container .btn-left {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.msg-dialog .btn-container .btn-right {
+  font-size: 28rpx;
+  color: #07C160;
+}

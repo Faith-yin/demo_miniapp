@@ -1,2 +1,70 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="mine-page">
+  <!-- 头像cell -->
+  <view class="pic-cell" bindtap="{{!userInfo.nickName && 'loginClick'}}">
+    <image src="{{userInfo.avatarUrl || '/assets/images/用户头像.png'}}" class="pic-img"></image>
+    <view class="pic-center">
+      <view class="pic-name">{{userInfo.nickName || '未登录'}}</view>
+      <view class="pic-middle">
+        <view class="pic-id-name">{{userInfo.nickName ? '小米ID：350377958' : '点击登录账号'}}</view>
+        <view class="pic-btn" wx:if="{{userInfo.nickName}}">切换账号</view>
+      </view>
+      <view></view>
+    </view>
+  </view>
+  <!-- 单行cell -->
+  <view class="single-cell">
+    <image src="/assets/images/店铺，门店.png"></image>
+    <view>小米精品推荐</view>
+    <view class="single-desc">（内测）</view>
+  </view>
+  <!-- 多行循环 -->
+  <view class="multi-list">
+    <view class="multi-cell" wx:for="{{list}}" wx:key="index">
+      <image src="{{item.iconPath}}"></image>
+      <view>{{item.text}}</view>
+    </view>
+  </view>
+
+  <!-- 遮罩层 -->
+  <view class="bg" wx:if="{{showDiolg}}" catchtouchmove="ture">
+  </view>
+
+  <!-- 自定义底部弹出层 -->
+  <view class="dialog-box {{showDiolg ? 'dialog-moveTop' : 'dialog-moveBottom'}}">
+    <view class="icon-wrapper">
+      <!-- <image bindtap="closeDiolg" src="/assets/images/关闭.png" class="icon-close"></image> -->
+      <span class="icon-close" bindtap="closeDiolg">X</span>
+    </view>
+    <view class="pic-wrapper">
+      <image src="/assets/images/用户头像.png" class="icon-pic"></image>
+      <view>依兮ic</view>
+    </view>
+    <view class="bottom-container">
+      <view class="login-text">登录/注册 小米Lite</view>
+      <button type="primary" 
+              class="get-btn"
+              bindtap="getInfoClick"
+              open-type="getUserInfo" 
+              bindgetuserinfo="bindGetUserInfo">微信一键登录</button>
+      <view class="desc-text">已阅读并同意 小米商城用户协议、小米商城隐私政策、小米账号用户协议和小米账号隐私政策</view>
+    </view>
+  </view>
+
+  <!-- 自定义弹窗 -->
+  <view class="msg-dialog" wx:if="{{showMsgDiolog}}">
+    <view class="title">温馨提示</view>
+    <view class="content">登录后才可完成购买，真的放弃吗？</view>
+    <view class="btn-container">
+      <button class="btn-left"
+              bindtap="judgeHomePage">先去转转</button>
+      <button class="btn-right" 
+              bindtap="getInfoClick" 
+              open-type="getUserInfo"
+              bindgetuserinfo="bindGetUserInfo">重新授权</button>
+    </view>
+  </view>
+
+
+
+</view>
