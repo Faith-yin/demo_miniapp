@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "slideshow": "/components/slideshow/slideshow",
+    "mp-icon": "/assets/weui-miniprogram/icon/icon"
+  }
 }

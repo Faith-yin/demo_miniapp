@@ -1,2 +1,79 @@
 <!--pages/goodDetail/goodDetail.wxml-->
-<text>pages/goodDetail/goodDetail.wxml</text>
+<view id="good-detail">
+  <!-- 轮播图组件 -->
+  <slideshow height="800rpx"
+            imgMode="scaleToFill"
+            imgWidth="375px"
+            imgHeight="840px"></slideshow>
+  <!-- 商品信息区域 -->
+  <view class="good-info-box">
+    <view class="good-title-cell">
+      <view class="good-title">{{itemContent.title}}</view>
+      <!-- <view class="good-share" bindtap="shareClick">分享</view> -->
+      <button class="good-share" open-type="share" bindtap="shareClick">分享</button>
+    </view>
+    <view class="good-desc">{{itemContent.desc}}</view>
+    <view class="good-price">{{itemContent.nowPrice}} 元</view>
+  </view>
+  <!-- 新人专享栏 -->
+  <view class="new-person-cell">
+    <view class="new-img">图片</view>
+    <view class="new-text">新人专享 <span style="color: '#ff6700'">百元大礼包</span> 正在派发，前往领取</view>
+    <mp-icon icon="arrow" color="#999" size="{{10}}"></mp-icon>
+  </view>
+  <!-- 地址区域 -->
+  <view class="adress-box">
+    <view class="cell adress-cell">
+      <view class="cell--flex">
+        <view class="color--999">送至</view>
+        <view class="title">唐山市 路北区</view>
+      </view>
+      <mp-icon icon="arrow" color="#999" size="{{10}}"></mp-icon>
+    </view>
+    <view class="cell select--cell">
+      <view class="cell--flex">
+        <view class="color--999">已选</view>
+        <view class="title">小米小爱触屏音箱 白色 x1</view>
+      </view> 
+      <mp-icon icon="arrow" color="#999" size="{{10}}"></mp-icon>
+    </view>
+    <view class="cell" bindtap="infoClick">
+      <view class="more-info">小米自营 小米发货 7天无理由退货</view>
+      <mp-icon icon="arrow" color="#999" size="{{10}}"></mp-icon>
+    </view>
+  </view>
+  <!-- 相关推荐 -->
+  <view class="recommend-box">
+    <view class="title">相关推荐</view>
+    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+      <view class="content-item scroll-view-item_H" wx:for="{{recommendList}}" wx:key="index">
+        <view class="content-title">{{item.title}}</view>
+        <view class="content-price">{{item.price}} 元</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 底部服务说明弹窗 -->
+  <view class="picker-box" 
+        style="height: {{height}}">
+    <view class="title" id="picker-title">服务说明</view>
+    <scroll-view scroll-y class="scroll-view-y" style="height: {{scrollHeight}}">
+      <view class="content-box">
+        <view class="cell">小米自营</view>
+        <view class="cell">小米发货</view>
+        <view class="cell">7天无理由退货</view>
+        <view class="cell">运费说明</view>
+        <view class="desc">由小米发货商品不含有品，单笔满49元免运费米粉节特 惠； 由小米有品发货的商品，免运费： 由第三方商冢发货的商品免运费． 特殊商品需要单独收取运费，具体以实际结算金额为准优惠 券等不能抵扣运费金额．如需无理由退货用户耳承担该商品 的退货物流费用；</view>
+        <view class="cell">企业信息</view>
+        <view class="desc">服务说明  ⑨企业信息     企业名称：小米通讯技术有限公司     企业执照注册号：91110108558521630L     企业地址：北京市海淀区清河中街68号华润五彩喊购物中     心期9层     企业电话：4001005678     营业期限：2010年08月25日至2040年08月24日     经营范围：开发手机技术、计算机软件及信息技术；技术     检测、技术咨询、技术服务、技术转让；计算机技术培     训；系统集成；货物进出口、技术进出口、代理进出口；     家用电器、通信设备、广播电视设备不含卫星电视广     播、地面接收装置，机械设备，电子产品、文化用品的     批发零售；维修仪器仪表；销售医疗器械』类．nⅢ类、     针纺织品含家纺家饰．服装鞋帽、日用杂货、工艺     品、文化用品、体育用品、照相器材、卫生用品含个人     护理用品、钟表眼镜、箱包、家具不从事实体店铺经     营．小饰品、日用品、乐器、自行车．智能卡；计算     机．通讯设备．家用电器、电子产品．机械设备的技术开     发．技术服务；销售金银饰品不含金银质地纪念币；     家用空调的委托生产；委托生产翻译机；销售翻译机、五     金交电不含电动自行车、厨房用品．陶瓷制品．玻璃     制品、玩具．汽车零配件、食用农产品．花卉、苗木、宠     物用品、建筑材料．装饰材料．化妆品．珠宝首饰．通讯     设备、卫生间用品、农药；生产手机仅限在海淀区永捷     北路2号三层生产及外埠生产；出版物批发；出版物零     售：销售食品。 销售第三类医疗器械以及销售食品以及     依法须经批准的项目，经相关部门批准后依批准的内容开     展经营活动</view>
+        <view class="cell">7天价格保护</view>
+      </view>
+    </scroll-view>
+    <button wx:if="{{height}}" class="btn" bindtap="closePicker">完成</button>
+  </view>
+
+  <!-- 遮罩 -->
+  <view class="bg" wx:if="{{height}}" bindtap="closePicker"></view>
+
+
+</view>

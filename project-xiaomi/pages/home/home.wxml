@@ -3,7 +3,7 @@
   <!-- 顶部导航栏 -->
   <navbar></navbar>
   <!-- 轮播图组件 -->
-  <slideshow></slideshow>
+  <slideshow imgMode="heightFix"></slideshow>
   <!-- 展示图标按钮区域 -->
   <view class="list-wrapper">
     <view wx:for="{{listBtn}}" wx:key="index" class="item-wrapper">
@@ -26,7 +26,11 @@
   <view class="middle-title">猜你喜欢</view>
   <!-- 循环小卡片 -->
   <view class="small-box-list">
-    <view class="small-box-item" wx:for="{{cardList}}" wx:key="index">
+    <view class="small-box-item" 
+          wx:for="{{cardList}}" 
+          wx:key="index" 
+          bindtap="itemClick"
+          data-itemcontent="{{item}}">
       <image class="image-pic" src="{{item.imgPath}}"></image>
       <view class="image-title font-hidden">{{item.title}}</view>
       <view class="image-desc font-multicell-hidden">{{item.desc}}</view>

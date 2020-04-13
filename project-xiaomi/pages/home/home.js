@@ -77,6 +77,26 @@ Page({
     ],
   },
 
+
+  /**
+   * 其中一小卡片被点击
+   */
+  itemClick: function(e) {
+    // console.log('拿到这条数据了',e.currentTarget.dataset.itemcontent)
+    wx.navigateTo({
+      url: '/pages/goodDetail/goodDetail',
+      success: res => {
+        res.eventChannel.emit('acceptDataFromOpenerPage', e.currentTarget.dataset)
+      }
+    })
+  },
+
+
+
+
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
