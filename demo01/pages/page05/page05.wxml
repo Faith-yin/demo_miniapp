@@ -1,0 +1,7 @@
+<!--pages/page05/page05.wxml-->
+
+<button bindtap="onGetWay">获取本机支持的生物认证方式</button>
+
+<!-- <button bindtap="onGetInfo">获取本机生物信息</button> -->
+
+<button bindtap="onStart">开始认证</button>
