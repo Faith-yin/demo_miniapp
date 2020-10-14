@@ -1,0 +1,3 @@
+<!--pages/page06/page06.wxml-->
+
+<button type="primary" bindtap="onClick">请求数据</button>

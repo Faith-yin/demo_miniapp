@@ -1,5 +1,18 @@
-//app.js
+/*
+ * @Date: 2020-03-27 09:07:53
+ * @information: 
+ */
+import new_api from './api/new_api'
+
+
 App({
+  globalData: {
+    userInfo: null,
+    token: `et54FwVoD7P0CMyPVpQZui6dl4r+hWGBA8EVg82mdEbMjKshDWFD3u+/6YsIZf27i0Tl8UfoAUhXQ5YjP2FJGpdIuKeUOdVhV+UndAkkk9j67V2StNu4RKry5Tt4s+xNxoPbd0N/oXSNflTc2Lhfh5GBCuvhq01qggmba0jCylwCjOp9weMXy5jU4AWSTnLdxeyd9bbMsbDpMGowDmiRZaQz52Yv/g+pYmhMnbUYdtbRkM6BGdoNRvhgyzq8xrrhwaZOTzR+xmL+QwJhrgIZlX2icLzeSOfHEsc61zKADFnJUNWeLltzlXJxXJaLbWpWF6qqr+EFxng2IEp/CG5ngA==`,
+  },
+
+  ...new_api,
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -33,7 +46,5 @@ App({
       }
     })
   },
-  globalData: {
-    userInfo: null
-  }
+
 })
